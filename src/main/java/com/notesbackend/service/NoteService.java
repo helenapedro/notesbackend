@@ -1,9 +1,11 @@
 package com.notesbackend.service;
 
 import com.notesbackend.repository.NoteRepository;
+import com.notesbackend.exception.ResourceNotFoundException;
 import com.notesbackend.model.Note;
 import com.notesbackend.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,9 +15,13 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class NoteService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(NoteService.class);
 
     @Autowired
     private NoteRepository noteRepository;
@@ -75,5 +81,24 @@ public class NoteService {
             return true;
         }
         return false;
+    }
+    
+    public Note togglePrivacy(Long noteId, User user) {
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() -> new ResourceNotFoundException("Note not found with id " + noteId));
+
+        // Check if the current user is the owner
+        if (!note.getUser().getUid().equals(user.getUid())) {
+            throw new AccessDeniedException("You are not authorized to change the privacy of this note.");
+        }
+        
+        // Log the action
+        logger.info("User {} is toggling the privacy of note {} from {} to {}",
+                user.getEmail(), noteId, note.isPublic(), !note.isPublic());
+        
+        // Toggle the privacy status
+        note.setPublic(!note.isPublic());
+
+        return noteRepository.save(note);
     }
 }

@@ -1,5 +1,8 @@
 package com.notesbackend.exception;
 
-public class ResourceNotFoundException {
-
+public class ResourceNotFoundException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
+	public ResourceNotFoundException(String message) {
+		super(message);
+	}
 }

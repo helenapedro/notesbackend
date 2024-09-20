@@ -69,7 +69,7 @@ public class UserService {
         return null;
     }
  
-	public boolean deleteUserById(Long uid) {
+	public boolean deleteUser(Long uid) {
 		if (userRepository.existsById(uid)) {
 			userRepository.deleteById(uid);
 			return true;

@@ -69,19 +69,16 @@ public class NoteController {
         Note createdNote = noteService.createNote(note, user);
         return ResponseEntity.ok(createdNote);
     }
-
-    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Note> updateNote(Authentication authentication, @PathVariable Long id, @RequestBody Note update) {
-        String email = authentication.getName();
-        System.out.println("Email: " + email);
+    
+    @PutMapping("/{noteId}/togglePrivacy")
+    public ResponseEntity<Note> toggleNotePrivacy(Authentication authentication ,@PathVariable Long noteId) {
+    	String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        System.out.println("User: " + user);
-        Note note = noteService.updateNote(id, update, user);
-        if (note == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(note);
+        
+        Note updateNote = noteService.togglePrivacy(noteId, user);
+        
+        return ResponseEntity.ok(updateNote);
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
