@@ -25,14 +25,13 @@ import lombok.Data;
 @Entity
 @Table(name = "notes", uniqueConstraints = @UniqueConstraint(columnNames = {"uid", "title"}))
 public class Note {
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long nid;
 
-	@NotNull
+    @NotNull
     private String title;
 
-    //@Column(columnDefinition = "TEXT")
     private String body;
 
     private LocalDateTime createdAt;
@@ -55,7 +54,7 @@ public class Note {
         updatedAt = LocalDateTime.now();
     }
     
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = {CascadeType.ALL}, orphanRemoval = true)
     private List<NoteTag> noteTags = new ArrayList<>();
 
     // Method to add a tag

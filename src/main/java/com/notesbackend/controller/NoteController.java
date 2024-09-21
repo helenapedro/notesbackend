@@ -14,6 +14,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/notes")
@@ -54,11 +55,17 @@ public class NoteController {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        Note note = noteService.getNoteById(id, user.getUid());
-        if (note == null || (!note.isPublic() && !note.getUser().getEmail().equals(authentication.getName()))) {
+
+        // Fetch the note as Optional
+        Optional<Note> optionalNote = noteService.getNoteById(id, user.getUid());
+
+        // If the note is not found or it's not public and the current user isn't the owner, return a 403
+        if (optionalNote.isEmpty() || (!optionalNote.get().isPublic() && !optionalNote.get().getUser().getEmail().equals(email))) {
             return ResponseEntity.status(403).build();
         }
-        return ResponseEntity.ok(note);
+
+        // Return the note
+        return ResponseEntity.ok(optionalNote.get());
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

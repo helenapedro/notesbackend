@@ -2,11 +2,11 @@ package com.notesbackend.model;
 
 import lombok.Data;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
-
-import org.hibernate.validator.constraints.UniqueElements;
 
 @Data
 @Entity
@@ -16,7 +16,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long uid;
     
-    @UniqueElements
+    @Email(message = "Please provide a valid email address")
+    @Column(unique = true)
     private String email;
     
     private String password;

@@ -15,6 +15,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,12 +47,10 @@ public class NoteService {
     }
     
     @Cacheable(value = "notes", key = "#userId + '-' + #id")
-    public Note getNoteById(Long id, Long userId) {
-        Note note = noteRepository.findById(id).orElse(null);
-        if (note != null && note.getUser().getUid().equals(userId)) {
-        	return note;
-        }
-        return null;
+    public Optional<Note> getNoteById(Long id, Long userId) {
+        // Use Optional to avoid null checks
+        return noteRepository.findById(id)
+            .filter(foundNote -> foundNote.getUser().getUid().equals(userId)); // Rename lambda variable to 'foundNote'
     }
 
     //@PreAuthorize("isAuthenticated()")
