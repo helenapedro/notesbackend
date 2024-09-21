@@ -5,7 +5,7 @@
 
     <cache alias="notes">
         <key-type>java.lang.String</key-type>
-        <value-type>com.pedroprojects.model.Note</value-type>
+        <value-type>com.notesbackend.model.Note</value-type>
         <expiry>
             <ttl unit="seconds">3600</ttl>
         </expiry>
