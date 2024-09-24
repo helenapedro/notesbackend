@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
@@ -20,26 +19,3 @@
         <appender-ref ref="ASYNC"/>
     </root>
 </configuration>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
-        <appender-ref ref="FILE"/>
-    </appender>
-
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/spring-boot-logger.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logs/spring-boot-logger.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <root level="INFO">
-        <appender-ref ref="ASYNC"/>
-    </root>
-</configuration>
->>>>>>> 1d0b59b97a14e3616cb5358808950e90416385cf

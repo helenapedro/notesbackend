@@ -1,13 +1,22 @@
 package com.notesbackend.controller;
 
 import com.notesbackend.model.User;
+import com.notesbackend.repository.UserDetailsImpl;
+import com.notesbackend.repository.UserMapper;
 import com.notesbackend.service.UserService;
 import com.notesbackend.dto.AuthenticateUserDto;
 import com.notesbackend.dto.JwtResponse;
 import com.notesbackend.dto.RegisterUserDto;
+import com.notesbackend.exception.CustomAuthenticationException;
 import com.notesbackend.util.JwtUtil;
-
+import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -15,22 +24,41 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
+@Valid
 public class UserController {
 
     @Autowired
     private UserService userService;
+    
+    @Autowired
+    private UserMapper userMapper;
 
     @Autowired
     private JwtUtil jwtUtil;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
+
+    // Fetch all users (only for admin)
+    @GetMapping
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public Page<User> getAllUsers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = PageRequest.of(page, size);
+        return userService.getAllUsers(pageable, null);
+    }
+
+
+    
     // Fetch authenticated user
     @GetMapping("/me")
     public ResponseEntity<?> getAuthenticatedUser(Authentication authentication) {
@@ -40,94 +68,84 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    // Fetch all users (only for admin)
-    @GetMapping
-    @PreAuthorize("hasRole('ADMIN')")
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
 
     // Fetch a user by ID (only admin or the authenticated user can access their own data)
     @GetMapping("/{uid}")
-    @PreAuthorize("hasRole('ADMIN') or #uid == authentication.principal.uid")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<User> getUserById(@PathVariable Long uid) {
         Optional<User> user = userService.getUserById(uid);
-        return user.map(ResponseEntity::ok)
-                   .orElse(ResponseEntity.notFound().build());
+        return user.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
     // Register a new user
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody RegisterUserDto userDto) {
-        if (userService.userExists(userDto.getEmail())) {
-            return ResponseEntity.badRequest().body("Email is already in use.");
+    	if (userService.userExists(userDto.getEmail())) {
+    		LOGGER.warn("Registration attempt failed. Email {} is already in use.", userDto.getEmail());
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Email is already in use.");
         }
 
-        // Create a new user and save
-        User user = new User();
-        user.setEmail(userDto.getEmail());
+        // Registration logic
+        User user = userMapper.toUser(userDto);
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        user.setFirstname(userDto.getFirstname());
-        user.setLastname(userDto.getLastname());
-        user.setBirthday(userDto.getBirthday());
-        user.setGender(userDto.getGender());
-        user.setPhoneNumber(userDto.getPhoneNumber());
-        user.setAddress(userDto.getAddress());
-
         userService.createUser(user);
-        return ResponseEntity.ok(user);
+        LOGGER.info("User registered successfully with email: {}", userDto.getEmail());
+        return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
     // Authenticate user and issue a JWT
     @PostMapping("/authenticate")
     public ResponseEntity<?> authenticateUser(@RequestBody AuthenticateUserDto userDto) {
-        User user = userService.getUserByEmail(userDto.getEmail())
-                .orElseThrow(() -> new RuntimeException("Invalid email or password"));
+        Optional<User> optionalUser = userService.getUserByEmail(userDto.getEmail());
 
-        if (passwordEncoder.matches(userDto.getPassword(), user.getPassword())) {
+        if (optionalUser.isPresent() && passwordEncoder.matches(
+        		userDto.getPassword(), 
+        		optionalUser.get().getPassword())) {
+            User user = optionalUser.get();
             String token = jwtUtil.generateToken(user.getEmail(), user.getUid());
+            LOGGER.info("Authentication successful for email: {}", userDto.getEmail());
             return ResponseEntity.ok(new JwtResponse(token));
-        } else {
-            return ResponseEntity.status(401).body("Invalid credentials");
         }
+
+        LOGGER.warn("Authentication failed for email: {}", userDto.getEmail());
+        throw new CustomAuthenticationException("Invalid email or password");
     }
+
 
     // Update user (only the user themselves or an admin can update their info)
     @PutMapping("/{uid}")
-    @PreAuthorize("hasRole('ADMIN') or #uid == authentication.principal.uid")
-    public ResponseEntity<User> updateUser(@PathVariable Long uid, @RequestBody User updatedUser, Authentication authentication) {
-        // Ensure user can only update their own info
-        String email = authentication.getName();
-        Optional<User> userOptional = userService.getUserById(uid);
-
-        if (userOptional.isPresent()) {
-            User user = userOptional.get();
-            if (!user.getEmail().equals(email) && !authentication.getAuthorities().stream()
-                    .anyMatch(role -> role.getAuthority().equals("ROLE_ADMIN"))) {
-                return ResponseEntity.status(403).body(null); // Forbidden if not admin and not the same user
-            }
-            User updated = userService.updateUser(updatedUser, uid);
-            return ResponseEntity.ok(updated);
-        }
-        return ResponseEntity.notFound().build();
+    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.uid")
+    public ResponseEntity<User> updateUser(@PathVariable Long uid, @RequestBody RegisterUserDto updatedUserDto, Authentication authentication) {
+        Long requestingUserId = ((UserDetailsImpl) authentication.getPrincipal()).getId();
+        LOGGER.info("Attempting to update user with ID: {}", uid);
+        return userService.getUserById(uid)
+                .map(user -> {
+                    User updated = userService.updateUser(updatedUserDto, uid, requestingUserId);  // Use the RegisterUserDto and requesting user ID
+                    LOGGER.info("User with ID: {} updated successfully", uid);
+                    return ResponseEntity.ok(updated);
+                })
+                .orElseGet(() -> {
+                    LOGGER.warn("User with ID: {} not found", uid);
+                    return ResponseEntity.notFound().build();
+                });
     }
+
 
     // Delete user (only the user themselves or an admin can delete)
     @DeleteMapping("/{uid}")
-    @PreAuthorize("hasRole('ADMIN') or #uid == authentication.principal.uid")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.uid")
     public ResponseEntity<?> deleteUser(@PathVariable Long uid, Authentication authentication) {
-        Optional<User> userOptional = userService.getUserById(uid);
-
-        if (userOptional.isPresent()) {
-            String email = authentication.getName();
-            User user = userOptional.get();
-            if (!user.getEmail().equals(email) && !authentication.getAuthorities().stream()
-                    .anyMatch(role -> role.getAuthority().equals("ROLE_ADMIN"))) {
-                return ResponseEntity.status(403).body("You are not authorized to delete this user.");
-            }
-            userService.deleteUser(uid);
-            return ResponseEntity.ok("User deleted successfully.");
-        }
-        return ResponseEntity.notFound().build();
+    	Long requestingUserId = ((UserDetailsImpl) authentication.getPrincipal()).getId();
+    	LOGGER.info("Attempting to delete user with ID: {}", uid);
+        return userService.getUserById(uid)
+        		.map(user -> {
+        			userService.deleteUser(uid, requestingUserId);
+        			LOGGER.info("User with ID: {} deleted successfully", uid);
+                    return ResponseEntity.ok("User deleted successfully.");
+        		})
+        		.orElseGet(() -> {
+        			LOGGER.warn("User with ID: {} not found", uid);
+                    return ResponseEntity.notFound().build();
+        		});
     }
 }
