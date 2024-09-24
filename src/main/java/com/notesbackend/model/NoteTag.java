@@ -25,4 +25,3 @@ public class NoteTag {
     @JoinColumn(name = "tid", nullable = false)
     private Tag tag;
 }
-

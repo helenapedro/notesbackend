@@ -30,4 +30,3 @@ public class AuditLog {
     @JoinColumn(name = "uid", nullable = false)
     private User user;
 }
-

@@ -1,11 +1,11 @@
 package com.notesbackend.controller;
 
 import com.notesbackend.dto.AuthRequest;
+import com.notesbackend.dto.AuthResponse;
 import com.notesbackend.model.User;
 import com.notesbackend.service.UserService;
 import com.notesbackend.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,7 +13,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
-//Controller to handle the login request.
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -43,11 +42,6 @@ public class AuthController {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         String token = jwtUtil.generateToken(user.getEmail(), user.getUid());
-        
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", "Bearer " + token);
-        headers.add("Location", "/notes");
-        
-        return new ResponseEntity<>(headers, HttpStatus.FOUND);
+        return ResponseEntity.ok(new AuthResponse(token));
     }
 }

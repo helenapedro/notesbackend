@@ -42,4 +42,3 @@ public class Comment {
         updatedAt = LocalDateTime.now();
     }
 }
-

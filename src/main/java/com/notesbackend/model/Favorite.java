@@ -23,4 +23,3 @@ public class Favorite {
     @JoinColumn(name = "nid", nullable = false)
     private Note note;
 }
-
