@@ -1,0 +1,104 @@
+package com.notesbackend.service;
+
+import com.notesbackend.repository.NoteRepository;
+import com.notesbackend.exception.ResourceNotFoundException;
+import com.notesbackend.model.Note;
+import com.notesbackend.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Service
+public class NoteService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(NoteService.class);
+
+    @Autowired
+    private NoteRepository noteRepository;
+
+    @PreAuthorize("isAuthenticated()")
+    public Page<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {
+        if (startDate == null && endDate == null) {
+            return noteRepository.findByUser_Uid(userId, pageable);
+        }
+        if (startDate == null) {
+            startDate = LocalDateTime.MIN;
+        }
+        if (endDate == null) {
+            endDate = LocalDateTime.now();
+        }
+        return noteRepository.findByUserUidAndCreatedAtBetween(userId, startDate, endDate, pageable);
+    }
+
+    public Page<Note> getPublicNotes(Pageable pageable) {
+        return noteRepository.findByIsPublicTrue(pageable);
+    }
+    
+    @Cacheable(value = "notes", key = "#userId + '-' + #id")
+    public Optional<Note> getNoteById(Long id, Long userId) {
+        // Use Optional to avoid null checks
+        return noteRepository.findById(id)
+            .filter(foundNote -> foundNote.getUser().getUid().equals(userId)); // Rename lambda variable to 'foundNote'
+    }
+
+    //@PreAuthorize("isAuthenticated()")
+    @PreAuthorize("#user.uid == principal.uid")
+    public Note createNote(Note note, User user) {
+        note.setUser(user);
+        note.setCreatedAt(LocalDateTime.now());
+        return noteRepository.save(note);
+    }
+
+    @CachePut(value = "notes", key = "#user.uid + '-' + #id")
+    public Note updateNote(Long id, Note updatedNote, User user) {
+        Note note = noteRepository.findById(id).orElse(null);
+        if (note != null && note.getUser().getUid().equals(user.getUid())) {
+            note.setTitle(updatedNote.getTitle());
+            note.setBody(updatedNote.getBody());
+            note.setUpdatedAt(LocalDateTime.now());
+            return noteRepository.save(note);
+        }
+        return null;
+    }
+
+    @CacheEvict(value = "notes", key = "#userId + '-' + #id")
+    public boolean deleteNoteById(Long id, User user) {
+        Note note = noteRepository.findById(id).orElse(null);
+        if (note != null && note.getUser().getUid().equals(user.getUid())) {
+            noteRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+    
+    public Note togglePrivacy(Long noteId, User user) {
+        Note note = noteRepository.findById(noteId)
+                .orElseThrow(() -> new ResourceNotFoundException("Note not found with id " + noteId));
+
+        // Check if the current user is the owner
+        if (!note.getUser().getUid().equals(user.getUid())) {
+            throw new AccessDeniedException("You are not authorized to change the privacy of this note.");
+        }
+        
+        // Log the action
+        logger.info("User {} is toggling the privacy of note {} from {} to {}",
+                user.getEmail(), noteId, note.isPublic(), !note.isPublic());
+        
+        // Toggle the privacy status
+        note.setPublic(!note.isPublic());
+
+        return noteRepository.save(note);
+    }
+}

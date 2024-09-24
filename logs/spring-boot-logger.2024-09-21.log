@@ -1,0 +1,1016 @@
+2024-09-21 19:11:39.252 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:11:39.252 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:11:48.244 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-21 19:11:48.244 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-21 19:11:48.248 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-09-21 19:12:02.494 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5930e60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.495 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5930e60: (connection is dead)
+2024-09-21 19:12:02.497 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c6ae656 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.497 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c6ae656: (connection is dead)
+2024-09-21 19:12:02.499 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d57ec6d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.499 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2d57ec6d: (connection is dead)
+2024-09-21 19:12:02.500 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1cb061d2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.501 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1cb061d2: (connection is dead)
+2024-09-21 19:12:02.503 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d781322 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.503 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4d781322: (connection is dead)
+2024-09-21 19:12:02.505 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6eef6a14 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.505 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6eef6a14: (connection is dead)
+2024-09-21 19:12:02.507 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49362aeb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.508 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@49362aeb: (connection is dead)
+2024-09-21 19:12:02.509 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c8a9272 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.509 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5c8a9272: (connection is dead)
+2024-09-21 19:12:02.510 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3659033b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.510 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3659033b: (connection is dead)
+2024-09-21 19:12:02.511 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70d26b3e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:12:02.511 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@70d26b3e: (connection is dead)
+2024-09-21 19:12:04.359 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@606804a7
+2024-09-21 19:12:04.390 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:12:06.292 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21550e9c
+2024-09-21 19:12:06.335 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=1, idle=1, waiting=0)
+2024-09-21 19:12:08.214 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10be8dc2
+2024-09-21 19:12:08.246 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:12:09.261 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:12:10.177 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@417af1d3
+2024-09-21 19:12:10.212 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:12:12.550 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a60ca48
+2024-09-21 19:12:12.593 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:12:14.652 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4534cc10
+2024-09-21 19:12:14.697 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:12:16.802 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@622bcec7
+2024-09-21 19:12:16.843 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:12:19.068 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6baa7a08
+2024-09-21 19:12:19.108 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:12:21.179 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@447345d7
+2024-09-21 19:12:21.210 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:12:23.108 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b9cf9f4
+2024-09-21 19:12:23.148 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:23.148 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:23.148 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:23.148 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:23.148 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:39.272 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:12:39.272 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:13:09.283 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:13:09.283 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:13:39.288 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:13:39.288 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:14:09.290 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:14:09.290 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:14:39.298 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:14:39.298 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:15:09.301 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:15:09.301 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:15:39.312 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:15:39.312 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:16:09.325 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:16:09.325 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:16:24.550 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@606804a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.551 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@606804a7: (connection is dead)
+2024-09-21 19:16:24.555 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21550e9c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.555 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@21550e9c: (connection is dead)
+2024-09-21 19:16:24.557 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10be8dc2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.557 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@10be8dc2: (connection is dead)
+2024-09-21 19:16:24.558 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@417af1d3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.558 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@417af1d3: (connection is dead)
+2024-09-21 19:16:24.559 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a60ca48 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.559 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@a60ca48: (connection is dead)
+2024-09-21 19:16:24.560 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4534cc10 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.560 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4534cc10: (connection is dead)
+2024-09-21 19:16:24.560 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@622bcec7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.560 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@622bcec7: (connection is dead)
+2024-09-21 19:16:24.561 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6baa7a08 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.561 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6baa7a08: (connection is dead)
+2024-09-21 19:16:24.561 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@447345d7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.561 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@447345d7: (connection is dead)
+2024-09-21 19:16:24.562 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b9cf9f4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:16:24.562 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1b9cf9f4: (connection is dead)
+2024-09-21 19:16:26.396 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15a6fe60
+2024-09-21 19:16:26.437 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:16:28.306 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@549bf45b
+2024-09-21 19:16:28.342 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=1, idle=1, waiting=0)
+2024-09-21 19:16:30.330 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6505c437
+2024-09-21 19:16:30.367 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:16:32.256 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34b40b14
+2024-09-21 19:16:32.287 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:16:34.137 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bc7de44
+2024-09-21 19:16:34.174 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:16:36.065 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30fa5301
+2024-09-21 19:16:36.105 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:16:38.071 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1063e60
+2024-09-21 19:16:38.101 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:16:39.340 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:16:39.958 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@573162f2
+2024-09-21 19:16:39.991 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:16:41.857 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44cbb692
+2024-09-21 19:16:41.902 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:16:43.759 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27d7014d
+2024-09-21 19:16:43.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:16:43.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:16:43.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:16:43.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:16:43.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:17:09.346 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:17:09.346 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:17:39.357 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:17:39.357 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:18:09.357 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:18:09.357 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:18:39.372 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:18:39.372 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:19:09.382 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:19:09.382 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:19:39.397 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:19:39.397 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:20:09.402 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:20:09.402 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:20:39.413 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:20:39.413 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:21:09.422 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:21:09.422 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:21:39.434 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:21:39.434 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:22:09.437 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:22:09.437 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:22:39.441 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:22:39.441 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:23:09.454 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:23:09.454 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:23:39.470 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:23:39.470 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:24:09.471 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:24:09.471 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:24:39.477 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:24:39.477 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:25:09.488 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:25:09.488 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:25:39.491 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:25:39.491 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:26:09.493 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:26:09.493 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:26:39.504 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:26:39.504 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:27:09.505 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:27:09.505 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:27:39.505 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:27:39.505 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:28:09.507 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:28:09.507 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:28:39.518 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:28:39.518 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:29:09.530 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:29:09.530 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:29:39.532 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:29:39.532 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:30:09.543 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:30:09.543 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:30:21.900 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15a6fe60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.900 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@15a6fe60: (connection is dead)
+2024-09-21 19:30:21.903 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@549bf45b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.903 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@549bf45b: (connection is dead)
+2024-09-21 19:30:21.904 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6505c437 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.904 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6505c437: (connection is dead)
+2024-09-21 19:30:21.938 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34b40b14 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.938 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@34b40b14: (connection is dead)
+2024-09-21 19:30:21.940 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2bc7de44 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.940 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2bc7de44: (connection is dead)
+2024-09-21 19:30:21.944 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30fa5301 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.944 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@30fa5301: (connection is dead)
+2024-09-21 19:30:21.946 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1063e60 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.946 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1063e60: (connection is dead)
+2024-09-21 19:30:21.948 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@573162f2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.948 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@573162f2: (connection is dead)
+2024-09-21 19:30:21.949 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44cbb692 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.949 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@44cbb692: (connection is dead)
+2024-09-21 19:30:21.950 [http-nio-8080-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27d7014d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:30:21.950 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@27d7014d: (connection is dead)
+2024-09-21 19:30:23.928 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@754c2624
+2024-09-21 19:30:23.969 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:30:25.849 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34712c1f
+2024-09-21 19:30:25.890 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:30:27.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50f1e55
+2024-09-21 19:30:27.824 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:30:29.891 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@545ed350
+2024-09-21 19:30:29.930 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:30:31.980 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b20ff08
+2024-09-21 19:30:32.022 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:30:33.933 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50106ba7
+2024-09-21 19:30:33.970 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:30:36.282 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fc6318d
+2024-09-21 19:30:36.320 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:30:38.228 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39fc7415
+2024-09-21 19:30:38.271 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:30:39.557 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:30:40.236 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@169963ad
+2024-09-21 19:30:40.267 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:30:42.797 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b9bce2
+2024-09-21 19:30:42.831 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:30:42.831 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:30:42.831 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:30:42.831 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:31:09.569 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:31:09.569 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:31:39.571 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:31:39.571 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:31:54.053 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@754c2624 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.053 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@754c2624: (connection is dead)
+2024-09-21 19:31:54.054 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34712c1f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.055 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@34712c1f: (connection is dead)
+2024-09-21 19:31:54.056 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50f1e55 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.056 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@50f1e55: (connection is dead)
+2024-09-21 19:31:54.057 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@545ed350 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.057 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@545ed350: (connection is dead)
+2024-09-21 19:31:54.058 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b20ff08 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.058 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@b20ff08: (connection is dead)
+2024-09-21 19:31:54.059 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50106ba7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.059 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@50106ba7: (connection is dead)
+2024-09-21 19:31:54.062 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2fc6318d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.062 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2fc6318d: (connection is dead)
+2024-09-21 19:31:54.064 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@39fc7415 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.064 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@39fc7415: (connection is dead)
+2024-09-21 19:31:54.066 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@169963ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.067 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@169963ad: (connection is dead)
+2024-09-21 19:31:54.068 [http-nio-8080-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35b9bce2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:31:54.068 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@35b9bce2: (connection is dead)
+2024-09-21 19:31:55.950 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@129e2d33
+2024-09-21 19:31:55.982 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:31:57.859 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53a32708
+2024-09-21 19:31:57.894 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=1, idle=1, waiting=0)
+2024-09-21 19:31:59.780 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62bab087
+2024-09-21 19:31:59.814 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:32:01.725 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@338cd847
+2024-09-21 19:32:01.757 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:32:03.712 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72cc0de7
+2024-09-21 19:32:03.745 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:32:05.829 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37c20772
+2024-09-21 19:32:05.866 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:32:08.151 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dc470d5
+2024-09-21 19:32:08.192 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:32:09.586 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:32:10.087 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45c0ab10
+2024-09-21 19:32:10.132 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:32:12.025 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b8610dc
+2024-09-21 19:32:12.070 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:32:13.961 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f999bb0
+2024-09-21 19:32:13.997 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:13.997 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:13.997 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:13.997 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:13.997 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:39.593 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:32:39.593 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:33:09.600 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:33:09.600 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:33:39.607 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:33:39.607 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:34:09.609 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:34:09.609 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:34:39.615 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:34:39.615 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:35:09.620 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:35:09.620 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:35:19.362 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@129e2d33 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.363 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@129e2d33: (connection is dead)
+2024-09-21 19:35:19.364 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53a32708 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.365 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@53a32708: (connection is dead)
+2024-09-21 19:35:19.368 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62bab087 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.368 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@62bab087: (connection is dead)
+2024-09-21 19:35:19.370 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@338cd847 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.370 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@338cd847: (connection is dead)
+2024-09-21 19:35:19.372 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72cc0de7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.372 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72cc0de7: (connection is dead)
+2024-09-21 19:35:19.374 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37c20772 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.374 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@37c20772: (connection is dead)
+2024-09-21 19:35:19.377 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4dc470d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.377 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4dc470d5: (connection is dead)
+2024-09-21 19:35:19.378 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45c0ab10 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.379 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@45c0ab10: (connection is dead)
+2024-09-21 19:35:19.382 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b8610dc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.383 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b8610dc: (connection is dead)
+2024-09-21 19:35:19.384 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f999bb0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:35:19.384 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@f999bb0: (connection is dead)
+2024-09-21 19:35:21.382 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18360635
+2024-09-21 19:35:21.423 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:35:23.414 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@590b0c0e
+2024-09-21 19:35:23.453 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:35:25.455 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6818310b
+2024-09-21 19:35:25.500 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:35:27.333 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3924f341
+2024-09-21 19:35:27.370 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:35:29.252 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c52869c
+2024-09-21 19:35:29.291 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:35:31.426 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d6a2edc
+2024-09-21 19:35:31.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:35:33.606 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bbb13c3
+2024-09-21 19:35:33.638 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:35:35.532 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47896ad1
+2024-09-21 19:35:35.571 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:35:37.494 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f3b25c9
+2024-09-21 19:35:37.526 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:35:39.546 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@251a4dc5
+2024-09-21 19:35:39.585 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:35:39.585 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:35:39.632 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:35:39.632 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:36:09.639 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:09.640 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:36:27.843 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18360635 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.843 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@18360635: (connection is dead)
+2024-09-21 19:36:27.845 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@590b0c0e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.845 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@590b0c0e: (connection is dead)
+2024-09-21 19:36:27.849 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6818310b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.849 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6818310b: (connection is dead)
+2024-09-21 19:36:27.852 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3924f341 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.852 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3924f341: (connection is dead)
+2024-09-21 19:36:27.857 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c52869c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.857 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c52869c: (connection is dead)
+2024-09-21 19:36:27.860 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d6a2edc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.861 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d6a2edc: (connection is dead)
+2024-09-21 19:36:27.863 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5bbb13c3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.863 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5bbb13c3: (connection is dead)
+2024-09-21 19:36:27.864 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47896ad1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.864 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47896ad1: (connection is dead)
+2024-09-21 19:36:27.865 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f3b25c9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.865 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4f3b25c9: (connection is dead)
+2024-09-21 19:36:27.866 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@251a4dc5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:36:27.866 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@251a4dc5: (connection is dead)
+2024-09-21 19:36:29.746 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ed99258
+2024-09-21 19:36:29.790 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:36:31.687 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe49863
+2024-09-21 19:36:31.719 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:36:33.736 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fcb672c
+2024-09-21 19:36:33.773 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:36:35.661 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@253c1365
+2024-09-21 19:36:35.706 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:36:37.594 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fbdc965
+2024-09-21 19:36:37.639 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:36:39.542 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2cc0b4
+2024-09-21 19:36:39.575 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:36:39.653 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:36:41.592 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48cb1832
+2024-09-21 19:36:41.629 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:36:43.637 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6902f450
+2024-09-21 19:36:43.670 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:36:45.527 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@261372fe
+2024-09-21 19:36:45.563 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:36:47.433 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55e326dc
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:36:47.469 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:37:09.669 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:37:09.669 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:37:39.681 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:37:39.681 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:38:09.682 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:38:09.682 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:38:39.691 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:38:39.691 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:39:09.702 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:39:09.702 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:39:39.708 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:39:39.709 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:40:09.711 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:40:09.712 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:40:39.719 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:40:39.719 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:41:02.923 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2ed99258 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.924 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2ed99258: (connection is dead)
+2024-09-21 19:41:02.927 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6fe49863 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.927 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6fe49863: (connection is dead)
+2024-09-21 19:41:02.931 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fcb672c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.931 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@fcb672c: (connection is dead)
+2024-09-21 19:41:02.933 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@253c1365 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.933 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@253c1365: (connection is dead)
+2024-09-21 19:41:02.935 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3fbdc965 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.935 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3fbdc965: (connection is dead)
+2024-09-21 19:41:02.937 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e2cc0b4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.937 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3e2cc0b4: (connection is dead)
+2024-09-21 19:41:02.939 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48cb1832 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.939 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@48cb1832: (connection is dead)
+2024-09-21 19:41:02.942 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6902f450 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.942 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6902f450: (connection is dead)
+2024-09-21 19:41:02.943 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@261372fe (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.943 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@261372fe: (connection is dead)
+2024-09-21 19:41:02.946 [http-nio-8080-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@55e326dc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:41:02.946 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@55e326dc: (connection is dead)
+2024-09-21 19:41:04.912 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50581be6
+2024-09-21 19:41:04.950 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:41:06.845 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@116511dd
+2024-09-21 19:41:06.878 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:41:08.759 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20be82ba
+2024-09-21 19:41:08.798 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:41:09.725 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:41:10.665 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@714aee92
+2024-09-21 19:41:10.702 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:41:12.628 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c26ca92
+2024-09-21 19:41:12.663 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:41:14.685 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7504f361
+2024-09-21 19:41:14.716 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:41:16.778 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e97b343
+2024-09-21 19:41:16.822 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:41:18.896 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3abf5b22
+2024-09-21 19:41:18.933 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:41:20.968 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@117ede18
+2024-09-21 19:41:21.006 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:41:23.015 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@284609f6
+2024-09-21 19:41:23.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:23.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:23.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:23.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:23.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:39.733 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:41:39.733 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:42:09.742 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:42:09.742 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:42:39.758 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:42:39.758 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:43:09.763 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:43:09.773 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:43:39.784 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:43:39.784 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:44:09.796 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:09.796 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:44:33.740 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50581be6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.741 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@50581be6: (connection is dead)
+2024-09-21 19:44:33.741 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@116511dd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.741 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@116511dd: (connection is dead)
+2024-09-21 19:44:33.744 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20be82ba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.744 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@20be82ba: (connection is dead)
+2024-09-21 19:44:33.745 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@714aee92 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.745 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@714aee92: (connection is dead)
+2024-09-21 19:44:33.747 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c26ca92 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.747 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5c26ca92: (connection is dead)
+2024-09-21 19:44:33.751 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7504f361 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.751 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7504f361: (connection is dead)
+2024-09-21 19:44:33.752 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e97b343 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.752 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5e97b343: (connection is dead)
+2024-09-21 19:44:33.753 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3abf5b22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.753 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3abf5b22: (connection is dead)
+2024-09-21 19:44:33.754 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@117ede18 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.754 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@117ede18: (connection is dead)
+2024-09-21 19:44:33.755 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@284609f6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:33.755 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@284609f6: (connection is dead)
+2024-09-21 19:44:35.823 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13b1dc7a
+2024-09-21 19:44:35.860 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:44:37.877 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2964c53
+2024-09-21 19:44:37.909 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:44:39.797 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:44:40.292 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a608013
+2024-09-21 19:44:40.324 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:44:42.405 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6589973
+2024-09-21 19:44:42.441 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:44:44.319 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61640b8e
+2024-09-21 19:44:44.367 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:44:46.396 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7003e13a
+2024-09-21 19:44:46.440 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:44:48.319 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d4f6203
+2024-09-21 19:44:48.361 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:44:50.233 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33f1d2c4
+2024-09-21 19:44:50.265 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:44:52.139 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38a0c5ca
+2024-09-21 19:44:52.173 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:44:54.059 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e07c3c4
+2024-09-21 19:44:54.092 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:54.092 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:54.092 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:54.092 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:57.083 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13b1dc7a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:44:57.083 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@13b1dc7a: (connection is dead)
+2024-09-21 19:44:58.950 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@318483d6
+2024-09-21 19:44:58.981 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:44:58.981 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:45:09.801 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:45:09.801 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:45:39.803 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:45:39.803 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:46:09.811 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:46:09.811 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:46:39.825 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:46:39.825 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:47:09.829 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:47:09.829 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:47:39.835 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:47:39.835 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:48:09.837 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:48:09.837 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:48:39.838 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:48:39.838 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:49:09.839 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:49:09.839 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:49:39.852 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:49:39.852 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:50:09.855 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:50:09.855 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:50:39.868 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:50:39.868 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:50:52.082 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2964c53 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.094 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2964c53: (connection is dead)
+2024-09-21 19:50:52.095 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a608013 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.095 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7a608013: (connection is dead)
+2024-09-21 19:50:52.097 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6589973 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.097 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6589973: (connection is dead)
+2024-09-21 19:50:52.098 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61640b8e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.098 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@61640b8e: (connection is dead)
+2024-09-21 19:50:52.099 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7003e13a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.099 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7003e13a: (connection is dead)
+2024-09-21 19:50:52.100 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d4f6203 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.100 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7d4f6203: (connection is dead)
+2024-09-21 19:50:52.101 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33f1d2c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.101 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@33f1d2c4: (connection is dead)
+2024-09-21 19:50:52.102 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@38a0c5ca (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.103 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@38a0c5ca: (connection is dead)
+2024-09-21 19:50:52.103 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e07c3c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.103 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7e07c3c4: (connection is dead)
+2024-09-21 19:50:52.104 [http-nio-8080-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@318483d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:50:52.104 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@318483d6: (connection is dead)
+2024-09-21 19:50:54.545 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78268da0
+2024-09-21 19:50:54.578 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:50:56.447 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@391b879b
+2024-09-21 19:50:56.483 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:50:58.459 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@868da19
+2024-09-21 19:50:58.492 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:51:00.378 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@593478d4
+2024-09-21 19:51:00.424 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:51:02.318 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bb44334
+2024-09-21 19:51:02.353 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:51:04.243 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d7ac549
+2024-09-21 19:51:04.288 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:51:06.306 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2642b697
+2024-09-21 19:51:06.344 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:51:08.707 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d86e1d8
+2024-09-21 19:51:08.746 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:51:09.882 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:51:12.098 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36500ce2
+2024-09-21 19:51:12.138 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:51:14.146 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63a617b0
+2024-09-21 19:51:14.189 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:14.189 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:14.189 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:14.189 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:20.396 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78268da0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:51:20.396 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@78268da0: (connection is dead)
+2024-09-21 19:51:20.397 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@391b879b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:51:20.397 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@391b879b: (connection is dead)
+2024-09-21 19:51:20.398 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@868da19 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:51:20.398 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@868da19: (connection is dead)
+2024-09-21 19:51:20.403 [http-nio-8080-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@593478d4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:51:20.404 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@593478d4: (connection is dead)
+2024-09-21 19:51:22.269 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c0e71ed
+2024-09-21 19:51:22.305 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:51:24.228 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d337bd6
+2024-09-21 19:51:24.270 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:51:26.118 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c044280
+2024-09-21 19:51:26.151 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:51:28.193 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d1c8499
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:28.226 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:39.887 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:51:39.887 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:52:09.898 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:52:09.898 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:52:39.909 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:52:39.909 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:52:55.794 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2bb44334 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.794 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2bb44334: (connection is dead)
+2024-09-21 19:52:55.797 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d7ac549 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.797 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5d7ac549: (connection is dead)
+2024-09-21 19:52:55.798 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2642b697 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.798 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2642b697: (connection is dead)
+2024-09-21 19:52:55.800 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d86e1d8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.800 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d86e1d8: (connection is dead)
+2024-09-21 19:52:55.802 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36500ce2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.802 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@36500ce2: (connection is dead)
+2024-09-21 19:52:55.804 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@63a617b0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.804 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@63a617b0: (connection is dead)
+2024-09-21 19:52:55.806 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c0e71ed (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.806 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3c0e71ed: (connection is dead)
+2024-09-21 19:52:55.810 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d337bd6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.810 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7d337bd6: (connection is dead)
+2024-09-21 19:52:55.812 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c044280 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.812 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4c044280: (connection is dead)
+2024-09-21 19:52:55.814 [http-nio-8080-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d1c8499 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:52:55.814 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d1c8499: (connection is dead)
+2024-09-21 19:52:57.714 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ef529ac
+2024-09-21 19:52:57.751 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:52:59.724 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fc82397
+2024-09-21 19:52:59.768 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:53:02.213 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e5d5b6e
+2024-09-21 19:53:02.258 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:53:04.253 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fe7dcd8
+2024-09-21 19:53:04.294 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:53:06.697 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77f69e87
+2024-09-21 19:53:06.737 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:53:08.741 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ba98786
+2024-09-21 19:53:08.782 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:53:09.913 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:53:10.864 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2aa37d8f
+2024-09-21 19:53:10.900 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:53:12.873 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bf6b55a
+2024-09-21 19:53:12.917 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:53:14.908 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65317271
+2024-09-21 19:53:14.945 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:53:17.004 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@378f3e2
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:17.034 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:20.809 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1048, SQLState: 23000
+2024-09-21 19:53:20.809 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'password' cannot be null
+2024-09-21 19:53:21.276 [http-nio-8080-exec-2] ERROR c.n.handler.GlobalExceptionHandler - An error occurred
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'password' cannot be null] [update users set address=?,birthday=?,created_at=?,email=?,firstname=?,gender=?,lastname=?,password=?,phone_number=?,updated_at=? where uid=?]; SQL [update users set address=?,birthday=?,created_at=?,email=?,firstname=?,gender=?,lastname=?,password=?,phone_number=?,updated_at=? where uid=?]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.notesbackend.service.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.notesbackend.controller.UserController.updateUser(UserController.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:269)
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:264)
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197)
+	at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.notesbackend.controller.UserController$$SpringCGLIB$$0.updateUser(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.notesbackend.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Column 'password' cannot be null] [update users set address=?,birthday=?,created_at=?,email=?,firstname=?,gender=?,lastname=?,password=?,phone_number=?,updated_at=? where uid=?]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.doStaticUpdate(UpdateCoordinatorStandard.java:781)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.performUpdate(UpdateCoordinatorStandard.java:328)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.update(UpdateCoordinatorStandard.java:245)
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:169)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 168 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'password' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 189 common frames omitted
+2024-09-21 19:53:21.279 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'password' cannot be null] [update users set address=?,birthday=?,created_at=?,email=?,firstname=?,gender=?,lastname=?,password=?,phone_number=?,updated_at=? where uid=?]; SQL [update users set address=?,birthday=?,created_at=?,email=?,firstname=?,gender=?,lastname=?,password=?,phone_number=?,updated_at=? where uid=?]; constraint [null]]
+2024-09-21 19:53:39.928 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:53:39.928 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:54:06.983 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ef529ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.985 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1ef529ac: (connection is dead)
+2024-09-21 19:54:06.985 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5fc82397 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.985 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5fc82397: (connection is dead)
+2024-09-21 19:54:06.987 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e5d5b6e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.987 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6e5d5b6e: (connection is dead)
+2024-09-21 19:54:06.988 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3fe7dcd8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.988 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3fe7dcd8: (connection is dead)
+2024-09-21 19:54:06.990 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77f69e87 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.990 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@77f69e87: (connection is dead)
+2024-09-21 19:54:06.991 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ba98786 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.991 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3ba98786: (connection is dead)
+2024-09-21 19:54:06.993 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2aa37d8f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.993 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2aa37d8f: (connection is dead)
+2024-09-21 19:54:06.994 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2bf6b55a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.994 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2bf6b55a: (connection is dead)
+2024-09-21 19:54:06.995 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@65317271 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.995 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@65317271: (connection is dead)
+2024-09-21 19:54:06.998 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@378f3e2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:06.998 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@378f3e2: (connection is dead)
+2024-09-21 19:54:08.889 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66dc7f4a
+2024-09-21 19:54:08.930 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:54:09.936 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2024-09-21 19:54:10.801 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e17571
+2024-09-21 19:54:10.834 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2024-09-21 19:54:12.834 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@168cd4e0
+2024-09-21 19:54:12.880 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=3, active=0, idle=3, waiting=0)
+2024-09-21 19:54:14.767 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ce8a3e
+2024-09-21 19:54:14.803 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=4, active=0, idle=4, waiting=0)
+2024-09-21 19:54:16.814 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aa87782
+2024-09-21 19:54:16.859 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2024-09-21 19:54:18.791 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43803159
+2024-09-21 19:54:18.826 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=6, active=0, idle=6, waiting=0)
+2024-09-21 19:54:20.701 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c2785cc
+2024-09-21 19:54:20.745 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=7, active=0, idle=7, waiting=0)
+2024-09-21 19:54:22.723 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38051223
+2024-09-21 19:54:22.760 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 19:54:24.632 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a908c47
+2024-09-21 19:54:24.669 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:54:26.530 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fba15af
+2024-09-21 19:54:26.569 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:26.569 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:26.569 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:32.256 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66dc7f4a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:32.258 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@66dc7f4a: (connection is dead)
+2024-09-21 19:54:32.262 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27e17571 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-09-21 19:54:32.262 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@27e17571: (connection is dead)
+2024-09-21 19:54:34.177 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d20f047
+2024-09-21 19:54:34.209 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 19:54:36.078 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c1dfa7c
+2024-09-21 19:54:36.111 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:36.111 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:36.111 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:36.111 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:39.952 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:54:39.952 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:55:09.967 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:55:09.967 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:55:39.975 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:55:39.975 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:56:09.983 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:56:09.994 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:56:40.006 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:56:40.006 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:57:10.019 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:57:10.019 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:57:40.032 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:57:40.032 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:58:10.048 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:58:10.048 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:58:40.055 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:58:40.055 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:59:10.063 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:59:10.063 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 19:59:40.069 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 19:59:40.069 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:00:10.077 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:00:10.077 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:00:40.093 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:00:40.093 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:01:10.096 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:01:10.096 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:01:40.099 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:01:40.099 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:02:10.104 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:02:10.104 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:02:40.108 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:02:40.108 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:03:10.117 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:03:10.117 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:03:40.122 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:03:40.122 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:04:10.128 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:04:10.128 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:04:40.139 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:04:40.139 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:05:10.155 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:05:10.155 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:05:40.166 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:05:40.166 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:06:10.167 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:06:10.167 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:06:40.167 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:06:40.168 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:07:10.169 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:07:10.169 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:07:40.179 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:07:40.179 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:08:10.182 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:08:10.182 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:08:40.184 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:08:40.184 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:23:23.083 [HikariPool-5 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=14m42s816ms25µs100ns).
+2024-09-21 20:23:23.083 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:23:23.107 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:23:29.963 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47ce8a3e: (connection has passed maxLifetime)
+2024-09-21 20:23:33.550 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61b62b21
+2024-09-21 20:23:33.607 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:23:41.148 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c2785cc: (connection has passed maxLifetime)
+2024-09-21 20:23:43.383 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43694025
+2024-09-21 20:23:43.418 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:23:53.115 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:23:53.116 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-09-21 20:23:55.400 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4a908c47: (connection has passed maxLifetime)
+2024-09-21 20:23:56.845 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5aa87782: (connection has passed maxLifetime)
+2024-09-21 20:23:57.691 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f0a6ceb
+2024-09-21 20:23:57.736 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 20:23:57.905 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4fba15af: (connection has passed maxLifetime)
+2024-09-21 20:23:58.028 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3c1dfa7c: (connection has passed maxLifetime)
+2024-09-21 20:23:59.757 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e3766d0
+2024-09-21 20:23:59.794 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=8, active=0, idle=8, waiting=0)
+2024-09-21 20:24:01.937 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fb3e889
+2024-09-21 20:24:01.973 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 20:24:03.616 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@168cd4e0: (connection has passed maxLifetime)
+2024-09-21 20:24:04.084 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e18999f
+2024-09-21 20:24:04.114 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 20:24:06.118 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43803159: (connection has passed maxLifetime)
+2024-09-21 20:24:06.224 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7892e646
+2024-09-21 20:24:06.256 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 20:24:08.470 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a56c336
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.513 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:08.607 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7d20f047: (connection has passed maxLifetime)
+2024-09-21 20:24:11.344 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@703a6f27
+2024-09-21 20:24:11.385 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:22.697 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@38051223: (connection has passed maxLifetime)
+2024-09-21 20:24:23.125 [HikariPool-5 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Pool stats (total=9, active=0, idle=9, waiting=0)
+2024-09-21 20:24:24.968 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1382457a
+2024-09-21 20:24:25.000 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:25.000 [HikariPool-5 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:45.035 [RMI TCP Connection(123)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-09-21 20:24:45.357 [RMI TCP Connection(123)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-21 20:24:45.467 [RMI TCP Connection(123)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-21 20:24:45.531 [RMI TCP Connection(123)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-09-21 20:24:45.532 [RMI TCP Connection(123)-127.0.0.1] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2024-09-21 20:24:45.537 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@61b62b21: (connection evicted)
+2024-09-21 20:24:45.558 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43694025: (connection evicted)
+2024-09-21 20:24:45.561 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@f0a6ceb: (connection evicted)
+2024-09-21 20:24:45.562 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4e3766d0: (connection evicted)
+2024-09-21 20:24:45.564 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7fb3e889: (connection evicted)
+2024-09-21 20:24:45.566 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2e18999f: (connection evicted)
+2024-09-21 20:24:45.567 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7892e646: (connection evicted)
+2024-09-21 20:24:45.570 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2a56c336: (connection evicted)
+2024-09-21 20:24:45.571 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@703a6f27: (connection evicted)
+2024-09-21 20:24:45.575 [HikariPool-5 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1382457a: (connection evicted)
+2024-09-21 20:24:45.579 [RMI TCP Connection(123)-127.0.0.1] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2024-09-21 20:24:45.587 [RMI TCP Connection(123)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-09-21 20:24:45.629 [RMI TCP Connection(123)-127.0.0.1] INFO  org.ehcache.core.EhcacheManager - Cache 'notes' removed from EhcacheManager.
