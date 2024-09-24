@@ -1,7 +1,6 @@
 package com.notesbackend.controller;
 
 import com.notesbackend.model.User;
-import com.notesbackend.repository.UserDetailsImpl;
 import com.notesbackend.repository.UserMapper;
 import com.notesbackend.service.UserService;
 import com.notesbackend.dto.AuthenticateUserDto;
@@ -9,26 +8,29 @@ import com.notesbackend.dto.JwtResponse;
 import com.notesbackend.dto.RegisterUserDto;
 import com.notesbackend.exception.CustomAuthenticationException;
 import com.notesbackend.util.JwtUtil;
-import jakarta.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/users")
-@Valid
+@RequestMapping("/api/users")
+@Validated
 public class UserController {
 
     @Autowired
@@ -45,8 +47,6 @@ public class UserController {
     
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
-
-    // Fetch all users (only for admin)
     @GetMapping
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public Page<User> getAllUsers(
@@ -54,10 +54,8 @@ public class UserController {
             @RequestParam(defaultValue = "10") int size) {
 
         Pageable pageable = PageRequest.of(page, size);
-        return userService.getAllUsers(pageable, null);
+        return userService.getAllUsers(pageable);
     }
-
-
     
     // Fetch authenticated user
     @GetMapping("/me")
@@ -68,8 +66,6 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-
-    // Fetch a user by ID (only admin or the authenticated user can access their own data)
     @GetMapping("/{uid}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<User> getUserById(@PathVariable Long uid) {
@@ -79,7 +75,7 @@ public class UserController {
 
     // Register a new user
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody RegisterUserDto userDto) {
+    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterUserDto userDto) {
     	if (userService.userExists(userDto.getEmail())) {
     		LOGGER.warn("Registration attempt failed. Email {} is already in use.", userDto.getEmail());
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Email is already in use.");
@@ -112,15 +108,27 @@ public class UserController {
     }
 
 
-    // Update user (only the user themselves or an admin can update their info)
     @PutMapping("/{uid}")
-    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.uid")
-    public ResponseEntity<User> updateUser(@PathVariable Long uid, @RequestBody RegisterUserDto updatedUserDto, Authentication authentication) {
-        Long requestingUserId = ((UserDetailsImpl) authentication.getPrincipal()).getId();
+    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.username")
+    public ResponseEntity<User> updateUser(
+            @PathVariable Long uid, 
+            @RequestBody RegisterUserDto updatedUserDto, 
+            Authentication authentication) {
+
+        // Fetch the currently authenticated user's ID based on their email
+        String email = authentication.getName();
+        Long requestingUserId = userService.getUserByEmail(email)
+                .map(User::getUid)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        LOGGER.info("Principal: " + auth.getPrincipal());
+
+
         LOGGER.info("Attempting to update user with ID: {}", uid);
         return userService.getUserById(uid)
                 .map(user -> {
-                    User updated = userService.updateUser(updatedUserDto, uid, requestingUserId);  // Use the RegisterUserDto and requesting user ID
+                    User updated = userService.updateUser(updatedUserDto, uid, requestingUserId);
                     LOGGER.info("User with ID: {} updated successfully", uid);
                     return ResponseEntity.ok(updated);
                 })
@@ -135,17 +143,24 @@ public class UserController {
     @DeleteMapping("/{uid}")
     @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.uid")
     public ResponseEntity<?> deleteUser(@PathVariable Long uid, Authentication authentication) {
-    	Long requestingUserId = ((UserDetailsImpl) authentication.getPrincipal()).getId();
-    	LOGGER.info("Attempting to delete user with ID: {}", uid);
+        
+        // Fetch the currently authenticated user's ID based on their email
+        String email = authentication.getName();
+        Long requestingUserId = userService.getUserByEmail(email)
+                .map(User::getUid)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        LOGGER.info("Attempting to delete user with ID: {}", uid);
         return userService.getUserById(uid)
-        		.map(user -> {
-        			userService.deleteUser(uid, requestingUserId);
-        			LOGGER.info("User with ID: {} deleted successfully", uid);
+                .map(user -> {
+                    userService.deleteUser(uid, requestingUserId);
+                    LOGGER.info("User with ID: {} deleted successfully", uid);
                     return ResponseEntity.ok("User deleted successfully.");
-        		})
-        		.orElseGet(() -> {
-        			LOGGER.warn("User with ID: {} not found", uid);
+                })
+                .orElseGet(() -> {
+                    LOGGER.warn("User with ID: {} not found", uid);
                     return ResponseEntity.notFound().build();
-        		});
+                });
     }
+
 }
