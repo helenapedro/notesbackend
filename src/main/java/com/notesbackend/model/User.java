@@ -15,16 +15,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long uid;
-    
+
     @Email(message = "Please provide a valid email address")
     @Column(unique = true)
     private String email;
-    
+
     private String password;
     private String firstname;
     private String lastname;
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt; 
+    private LocalDateTime updatedAt;
     private Date birthday;
     private String gender;
     private String phoneNumber;
@@ -39,12 +39,12 @@ public class User {
     private List<Role> roles;
 
     @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
-    
     @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
-    }  
+    public void prePersistOrUpdate() {
+        this.email = this.email != null ? this.email.toLowerCase() : null;
+        if (createdAt == null) {
+            createdAt = LocalDateTime.now(); 
+        }
+        updatedAt = LocalDateTime.now(); 
+    }
 }

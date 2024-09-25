@@ -28,7 +28,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@Transactional
 public class UserService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
@@ -82,6 +81,7 @@ public class UserService {
         return userRepository.existsByEmail(email);
     }
 
+    @Transactional
     public User updateUser(
     		RegisterUserDto updateUserDto, 
     		Long uid, 
@@ -115,6 +115,7 @@ public class UserService {
         }
     }
 
+    @Transactional
     public boolean deleteUser(Long uid, Long requestingUserId) {
         Optional<User> userOptional = userRepository.findById(uid);
         if (userOptional.isPresent()) {

@@ -18,6 +18,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -109,26 +110,26 @@ public class UserController {
 
 
     @PutMapping("/{uid}")
-    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.username")
     public ResponseEntity<User> updateUser(
             @PathVariable Long uid, 
-            @RequestBody RegisterUserDto updatedUserDto, 
+            @Valid @RequestBody RegisterUserDto updatedUserDto, 
             Authentication authentication) {
 
         // Fetch the currently authenticated user's ID based on their email
         String email = authentication.getName();
-        Long requestingUserId = userService.getUserByEmail(email)
-                .map(User::getUid)
+        User currentUser = userService.getUserByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        LOGGER.info("Principal: " + auth.getPrincipal());
 
+        // Check if the user is attempting to update their own profile or has admin privileges
+        if (!currentUser.getUid().equals(uid) && !userService.requestingUserHasAdminRole(currentUser.getUid())) {
+            throw new AccessDeniedException("You are not allowed to update this user.");
+        }
 
         LOGGER.info("Attempting to update user with ID: {}", uid);
+
         return userService.getUserById(uid)
                 .map(user -> {
-                    User updated = userService.updateUser(updatedUserDto, uid, requestingUserId);
+                    User updated = userService.updateUser(updatedUserDto, uid, currentUser.getUid());
                     LOGGER.info("User with ID: {} updated successfully", uid);
                     return ResponseEntity.ok(updated);
                 })
@@ -138,22 +139,23 @@ public class UserController {
                 });
     }
 
-
-    // Delete user (only the user themselves or an admin can delete)
     @DeleteMapping("/{uid}")
-    @PreAuthorize("hasRole('ROLE_ADMIN') or #uid == principal.uid")
     public ResponseEntity<?> deleteUser(@PathVariable Long uid, Authentication authentication) {
-        
-        // Fetch the currently authenticated user's ID based on their email
+        // Fetch the authenticated user based on their email
         String email = authentication.getName();
-        Long requestingUserId = userService.getUserByEmail(email)
-                .map(User::getUid)
+        User currentUser = userService.getUserByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
+        // Check if the user is trying to delete their own account or has admin privileges
+        if (!currentUser.getUid().equals(uid) && !userService.requestingUserHasAdminRole(currentUser.getUid())) {
+            throw new AccessDeniedException("You are not allowed to delete this user.");
+        }
+
         LOGGER.info("Attempting to delete user with ID: {}", uid);
+
         return userService.getUserById(uid)
                 .map(user -> {
-                    userService.deleteUser(uid, requestingUserId);
+                    userService.deleteUser(uid, currentUser.getUid());
                     LOGGER.info("User with ID: {} deleted successfully", uid);
                     return ResponseEntity.ok("User deleted successfully.");
                 })
@@ -162,5 +164,4 @@ public class UserController {
                     return ResponseEntity.notFound().build();
                 });
     }
-
 }

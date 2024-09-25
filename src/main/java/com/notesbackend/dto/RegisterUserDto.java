@@ -12,8 +12,8 @@ import lombok.Data;
 @Data
 public class RegisterUserDto {
 
-	@Email(message = "Invalid email format")
 	@NotBlank(message = "Email is required")
+	@Email(message = "Invalid email format")
     private String email;
     
 	@NotBlank(message = "Password is required")
@@ -21,13 +21,13 @@ public class RegisterUserDto {
     private String password;
     
 	@NotBlank(message = "First name is required")
-    private String firstname;
+    private String firstname; 
 	
 	@NotBlank(message = "First name is required")
     private String lastname;
 	
-	@Past(message = "Birthday must be in the past")
 	@NotNull(message = "Birthday is required")
+	@Past(message = "Birthday must be in the past")
     private Date birthday;
 	
     private String gender;
