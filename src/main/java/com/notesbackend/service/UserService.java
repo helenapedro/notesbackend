@@ -2,10 +2,10 @@ package com.notesbackend.service;
 
 import com.notesbackend.model.User;
 import com.notesbackend.model.Role;
-import com.notesbackend.repository.UserMapper;
 import com.notesbackend.repository.UserRepository;
 import com.notesbackend.dto.RegisterUserDto;
 import com.notesbackend.exception.UserNotFoundException;
+import com.notesbackend.mapper.UserMapper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,26 +40,25 @@ public class UserService {
 
     @Autowired
     private final RoleService roleService;
-    
+
     @Autowired
     private final UserMapper userMapper;
 
     public UserService(
-    		UserRepository userRepository, 
-    		RoleService roleService, 
-    		PasswordEncoder passwordEncoder,
-    		UserMapper userMapper) {
+            UserRepository userRepository,
+            RoleService roleService,
+            PasswordEncoder passwordEncoder,
+            UserMapper userMapper) {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.passwordEncoder = passwordEncoder;
-		this.userMapper = userMapper;
+        this.userMapper = userMapper;
     }
 
     public Page<User> getAllUsers(Pageable pageable) {
         return userRepository.findAll(PageRequest.of(
-            pageable.getPageNumber(),
-            pageable.getPageSize()
-        ));
+                pageable.getPageNumber(),
+                pageable.getPageSize()));
     }
 
     public Optional<User> getUserByEmail(String email) {
@@ -83,26 +82,26 @@ public class UserService {
 
     @Transactional
     public User updateUser(
-    		RegisterUserDto updateUserDto, 
-    		Long uid, 
-    		Long requestingUserId) {
-    	
+            RegisterUserDto updateUserDto,
+            Long uid,
+            Long requestingUserId) {
+
         Optional<User> userOptional = userRepository.findById(uid);
-        
+
         if (userOptional.isPresent()) {
             User user = userOptional.get();
 
-            if (!user.getUid().equals(requestingUserId) && 
-            		!requestingUserHasAdminRole(requestingUserId)) {
+            if (!user.getUid().equals(requestingUserId) &&
+                    !requestingUserHasAdminRole(requestingUserId)) {
                 LOGGER.warn("Unauthorized update attempt for user ID: {}", uid);
                 throw new AccessDeniedException("Unauthorized attempt to update user");
             }
-            
+
             userMapper.updateUserFromDto(updateUserDto, user);
-            
+
             // If the password is provided, encode and update it
-            if (updateUserDto.getPassword() != null && 
-            		!updateUserDto.getPassword().isEmpty()) {
+            if (updateUserDto.getPassword() != null &&
+                    !updateUserDto.getPassword().isEmpty()) {
                 user.setPassword(passwordEncoder.encode(updateUserDto.getPassword()));
             }
 
@@ -119,7 +118,8 @@ public class UserService {
     public boolean deleteUser(Long uid, Long requestingUserId) {
         Optional<User> userOptional = userRepository.findById(uid);
         if (userOptional.isPresent()) {
-            if (!userOptional.get().getUid().equals(requestingUserId) && !requestingUserHasAdminRole(requestingUserId)) {
+            if (!userOptional.get().getUid().equals(requestingUserId)
+                    && !requestingUserHasAdminRole(requestingUserId)) {
                 LOGGER.warn("Unauthorized deletion attempt for user ID: {}", uid);
                 throw new AccessDeniedException("Unauthorized attempt to delete user");
             }
@@ -145,8 +145,7 @@ public class UserService {
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(),
                 user.getPassword(),
-                authorities
-        );
+                authorities);
     }
 
     public boolean requestingUserHasAdminRole(Long requestingUserId) {

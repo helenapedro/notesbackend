@@ -31,11 +31,7 @@ public class User {
     private String address;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "user_roles",
-        joinColumns = @JoinColumn(name = "uid"),
-        inverseJoinColumns = @JoinColumn(name = "rid")
-    )
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "uid"), inverseJoinColumns = @JoinColumn(name = "rid"))
     private List<Role> roles;
 
     @PrePersist
@@ -43,8 +39,8 @@ public class User {
     public void prePersistOrUpdate() {
         this.email = this.email != null ? this.email.toLowerCase() : null;
         if (createdAt == null) {
-            createdAt = LocalDateTime.now(); 
+            createdAt = LocalDateTime.now();
         }
-        updatedAt = LocalDateTime.now(); 
+        updatedAt = LocalDateTime.now();
     }
 }
