@@ -3,9 +3,13 @@ package com.notesbackend.service;
 import com.notesbackend.model.User;
 import com.notesbackend.model.Role;
 import com.notesbackend.repository.UserRepository;
-import com.notesbackend.dto.RegisterUserDto;
+
+import lombok.Data;
+
+import com.notesbackend.dto.UpdateUserDto;
+import com.notesbackend.exception.IncorrectCurrentPasswordException;
 import com.notesbackend.exception.UserNotFoundException;
-import com.notesbackend.mapper.UserMapper;
+import com.notesbackend.mapper.UpdateUserMapper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +32,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Data
 public class UserService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
@@ -40,19 +45,19 @@ public class UserService {
 
     @Autowired
     private final RoleService roleService;
-
+    
     @Autowired
-    private final UserMapper userMapper;
+    private UpdateUserMapper updateUserMapper;
 
     public UserService(
             UserRepository userRepository,
             RoleService roleService,
             PasswordEncoder passwordEncoder,
-            UserMapper userMapper) {
+            UpdateUserMapper updateUserMapper) {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.passwordEncoder = passwordEncoder;
-        this.userMapper = userMapper;
+        this.updateUserMapper = updateUserMapper;
     }
 
     public Page<User> getAllUsers(Pageable pageable) {
@@ -82,9 +87,7 @@ public class UserService {
 
     @Transactional
     public User updateUser(
-            RegisterUserDto updateUserDto,
-            Long uid,
-            Long requestingUserId) {
+    		UpdateUserDto updateUserDto, Long uid, Long requestingUserId) {
 
         Optional<User> userOptional = userRepository.findById(uid);
 
@@ -96,21 +99,47 @@ public class UserService {
                 LOGGER.warn("Unauthorized update attempt for user ID: {}", uid);
                 throw new AccessDeniedException("Unauthorized attempt to update user");
             }
-
-            userMapper.updateUserFromDto(updateUserDto, user);
-
-            // If the password is provided, encode and update it
-            if (updateUserDto.getPassword() != null &&
-                    !updateUserDto.getPassword().isEmpty()) {
-                user.setPassword(passwordEncoder.encode(updateUserDto.getPassword()));
+            
+            LOGGER.info("Updating user with ID: {}", uid);
+            
+            if (updateUserDto.getEmail() != null) {
+                user.setEmail(updateUserDto.getEmail());
             }
-
+            if (updateUserDto.getFirstname() != null) {
+                user.setFirstname(updateUserDto.getFirstname());
+            }
+            if (updateUserDto.getLastname() != null) {
+                user.setLastname(updateUserDto.getLastname());
+            }
+            if (updateUserDto.getBirthday() != null) {
+                user.setBirthday(updateUserDto.getBirthday());
+            }
+            if (updateUserDto.getGender() != null) {
+                user.setGender(updateUserDto.getGender());
+            }
+            if (updateUserDto.getPhoneNumber() != null) {
+                user.setPhoneNumber(updateUserDto.getPhoneNumber());
+            }
+            
+            if (updateUserDto.getAddress() != null) {
+                user.setAddress(updateUserDto.getAddress());
+            }
+            
+            if (updateUserDto.getPassword() != null && !updateUserDto.getPassword().isEmpty()) {
+            	if (updateUserDto.getCurrentPassword() == null || 
+                        !passwordEncoder.matches(updateUserDto.getCurrentPassword(), user.getPassword())) {
+            		throw new IncorrectCurrentPasswordException("Current password is incorrect");
+            	}
+            	user.setPassword(passwordEncoder.encode(updateUserDto.getPassword()));
+            }
+            
             User savedUser = userRepository.save(user);
             LOGGER.info("User with ID: {} updated successfully", uid);
+
             return savedUser;
         } else {
-            LOGGER.warn("User with ID: {} not found", uid);
-            throw new UserNotFoundException(uid);
+        	LOGGER.warn("User with ID: {} not found", uid);
+            throw new UsernameNotFoundException("User not found");
         }
     }
 

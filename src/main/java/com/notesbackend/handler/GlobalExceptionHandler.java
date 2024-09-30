@@ -13,6 +13,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import com.notesbackend.exception.CustomAuthenticationException;
+import com.notesbackend.exception.IncorrectCurrentPasswordException;
 import com.notesbackend.exception.UserNotFoundException;
 
 import jakarta.validation.ConstraintViolationException;
@@ -97,5 +98,36 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+    
+    @ExceptionHandler(IncorrectCurrentPasswordException.class)
+    public ResponseEntity<Object> handleIncorrectCurrentPasswordException(IncorrectCurrentPasswordException ex) {
+        return new ResponseEntity<>(new ErrorResponse("Current password is incorrect", HttpStatus.FORBIDDEN.value()), HttpStatus.FORBIDDEN);
+    }
+    
+    public static class ErrorResponse {
+    	private String message;
+        private int status;
+
+        public ErrorResponse(String message, int status) {
+            this.message = message;
+            this.status = status;
+        }
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+
+		public int getStatus() {
+			return status;
+		}
+
+		public void setStatus(int status) {
+			this.status = status;
+		}
     }
 }
