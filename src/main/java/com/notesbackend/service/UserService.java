@@ -86,22 +86,21 @@ public class UserService {
     }
 
     @Transactional
-    public User updateUser(
-    		UpdateUserDto updateUserDto, Long uid, Long requestingUserId) {
-
+    public User updateUser(UpdateUserDto updateUserDto, Long uid, Long requestingUserId) {
         Optional<User> userOptional = userRepository.findById(uid);
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
 
-            if (!user.getUid().equals(requestingUserId) &&
-                    !requestingUserHasAdminRole(requestingUserId)) {
+            // Ensure only the owner or an admin can update the user
+            if (!user.getUid().equals(requestingUserId) && !requestingUserHasAdminRole(requestingUserId)) {
                 LOGGER.warn("Unauthorized update attempt for user ID: {}", uid);
                 throw new AccessDeniedException("Unauthorized attempt to update user");
             }
-            
+
             LOGGER.info("Updating user with ID: {}", uid);
-            
+
+            // Update fields if they are provided
             if (updateUserDto.getEmail() != null) {
                 user.setEmail(updateUserDto.getEmail());
             }
@@ -120,28 +119,30 @@ public class UserService {
             if (updateUserDto.getPhoneNumber() != null) {
                 user.setPhoneNumber(updateUserDto.getPhoneNumber());
             }
-            
             if (updateUserDto.getAddress() != null) {
                 user.setAddress(updateUserDto.getAddress());
             }
-            
+
+            // Handle password update securely
             if (updateUserDto.getPassword() != null && !updateUserDto.getPassword().isEmpty()) {
-            	if (updateUserDto.getCurrentPassword() == null || 
-                        !passwordEncoder.matches(updateUserDto.getCurrentPassword(), user.getPassword())) {
-            		throw new IncorrectCurrentPasswordException("Current password is incorrect");
-            	}
-            	user.setPassword(passwordEncoder.encode(updateUserDto.getPassword()));
+                if (updateUserDto.getCurrentPassword() == null || 
+                    !passwordEncoder.matches(updateUserDto.getCurrentPassword(), user.getPassword())) {
+                    throw new IncorrectCurrentPasswordException("Current password is incorrect");
+                }
+                user.setPassword(passwordEncoder.encode(updateUserDto.getPassword()));
             }
-            
+
+            // Save updated user data
             User savedUser = userRepository.save(user);
             LOGGER.info("User with ID: {} updated successfully", uid);
-
             return savedUser;
+
         } else {
-        	LOGGER.warn("User with ID: {} not found", uid);
+            LOGGER.warn("User with ID: {} not found", uid);
             throw new UsernameNotFoundException("User not found");
         }
     }
+
 
     @Transactional
     public boolean deleteUser(Long uid, Long requestingUserId) {
@@ -182,6 +183,15 @@ public class UserService {
         if (principal instanceof UserDetails) {
             UserDetails userDetails = (UserDetails) principal;
             return userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        }
+        return false;
+    }
+    
+    public boolean requestingUserHasTesterRole(Long requestingUserId) {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) principal;
+            return userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_TESTER"));
         }
         return false;
     }

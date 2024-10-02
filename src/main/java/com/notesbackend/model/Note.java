@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,12 +38,7 @@ public class Note {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    @ManyToOne
-    @JoinColumn(name = "uid", nullable = false)
-    @JsonBackReference
-    private User user;
-
-    private boolean isPublic; 
+    private boolean isPublic = false;
 
     @PrePersist
     protected void onCreate() {
@@ -53,11 +49,31 @@ public class Note {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
-    
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "uid", nullable = false)
+    @JsonBackReference
+    private User user;
+
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<NoteMedia> media = new ArrayList<>();
+
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Collaborator> collaborators = new ArrayList<>();
+
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Favorite> favorites = new ArrayList<>();
+
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AuditLog> auditLogs = new ArrayList<>();
+
     @OneToMany(mappedBy = "note", cascade = {CascadeType.ALL}, orphanRemoval = true)
     private List<NoteTag> noteTags = new ArrayList<>();
 
-    // Method to add a tag
+    // Methods to add/remove tags
     public void addTag(Tag tag) {
         NoteTag noteTag = new NoteTag();
         noteTag.setNote(this);
@@ -65,8 +81,56 @@ public class Note {
         noteTags.add(noteTag);
     }
 
-    // Method to remove a tag
     public void removeTag(Tag tag) {
         noteTags.removeIf(nt -> nt.getTag().equals(tag));
+    }
+
+    // Methods to add/remove media
+    public void addMedia(NoteMedia mediaItem) {
+        mediaItem.setNote(this);
+        media.add(mediaItem);
+    }
+
+    public void removeMedia(NoteMedia mediaItem) {
+        media.remove(mediaItem);
+        mediaItem.setNote(null);
+    }
+
+    // Methods to add/remove collaborators
+    public void addCollaborator(Collaborator collaborator) {
+        collaborator.setNote(this);
+        collaborators.add(collaborator);
+    }
+
+    public void removeCollaborator(Collaborator collaborator) {
+        collaborators.remove(collaborator);
+        collaborator.setNote(null);
+    }
+
+    // Methods to add/remove comments
+    public void addComment(Comment comment) {
+        comment.setNote(this);
+        comments.add(comment);
+    }
+
+    public void removeComment(Comment comment) {
+        comments.remove(comment);
+        comment.setNote(null);
+    }
+
+    // Methods to add/remove favorites
+    public void addFavorite(Favorite favorite) {
+        favorite.setNote(this);
+        favorites.add(favorite);
+    }
+
+    public void removeFavorite(Favorite favorite) {
+        favorites.remove(favorite);
+        favorite.setNote(null);
+    }
+
+    // Method to toggle privacy
+    public void togglePrivacy() {
+        this.isPublic = !this.isPublic;
     }
 }

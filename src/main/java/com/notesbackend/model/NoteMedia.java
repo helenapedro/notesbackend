@@ -25,7 +25,7 @@ public class NoteMedia {
     
     private String s3Url;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "nid", nullable = false)
     private Note note; 
 

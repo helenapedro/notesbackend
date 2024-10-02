@@ -31,6 +31,7 @@ public class SecurityConfiguration {
 
     @Autowired
     private CustomAccessDeniedHandler customAccessDeniedHandler;
+    
 
     @Bean
     public PasswordEncoder passwordEncoder() {

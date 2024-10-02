@@ -9,9 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "note_tags")
+@Data
 public class NoteTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,6 +8,7 @@ import com.notesbackend.dto.JwtResponse;
 import com.notesbackend.dto.RegisterUserDto;
 import com.notesbackend.dto.UpdateUserDto;
 import com.notesbackend.exception.CustomAuthenticationException;
+import com.notesbackend.exception.IncorrectCurrentPasswordException;
 import com.notesbackend.mapper.UserMapper;
 import com.notesbackend.util.JwtUtil;
 import com.notesbackend.controller.UserController;
@@ -60,6 +61,13 @@ public class UserController {
         return userService.getAllUsers(pageable);
     }
 
+    @GetMapping("/{uid}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<User> getUserById(@PathVariable Long uid) {
+    	Optional<User> user = userService.getUserById(uid);
+    	return user.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+    
     // Fetch authenticated user
     @GetMapping("/me")
     public ResponseEntity<?> getAuthenticatedUser(Authentication authentication) {
@@ -67,13 +75,6 @@ public class UserController {
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         return ResponseEntity.ok(user);
-    }
-
-    @GetMapping("/{uid}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<User> getUserById(@PathVariable Long uid) {
-        Optional<User> user = userService.getUserById(uid);
-        return user.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
     // Register a new user
@@ -111,7 +112,7 @@ public class UserController {
     }
 
     @PutMapping("/{uid}")
-    public ResponseEntity<User> updateUser(
+    public ResponseEntity<?> updateUser(
             @PathVariable Long uid,
             @Valid @RequestBody UpdateUserDto updatedUserDto,
             Authentication authentication) {
@@ -124,9 +125,20 @@ public class UserController {
             throw new AccessDeniedException("You are not allowed to update this user.");
         }
 
-        User updated = userService.updateUser(updatedUserDto, uid, currentUser.getUid());
-        return ResponseEntity.ok(updated);
+        try {
+            User updatedUser = userService.updateUser(updatedUserDto, uid, currentUser.getUid());
+            return ResponseEntity.ok(updatedUser);
+        } catch (IncorrectCurrentPasswordException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        } catch (UsernameNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (AccessDeniedException e) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred");
+        }
     }
+
 
     @DeleteMapping("/{uid}")
     public ResponseEntity<?> deleteUser(@PathVariable Long uid, Authentication authentication) {

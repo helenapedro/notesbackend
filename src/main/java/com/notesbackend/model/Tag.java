@@ -14,9 +14,9 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "tags")
+@Data
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,5 +1,7 @@
 package com.notesbackend.controller;
 
+import com.notesbackend.dto.CreateNoteDto;
+import com.notesbackend.exception.ResourceNotFoundException;
 import com.notesbackend.model.Note;
 import com.notesbackend.model.User;
 import com.notesbackend.service.NoteService;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -17,7 +20,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/notes")
+@RequestMapping("/api/notes")
 public class NoteController {
 
     @Autowired
@@ -35,7 +38,7 @@ public class NoteController {
             @RequestParam(defaultValue = "10") int size) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         Pageable pageable = PageRequest.of(page, size);
         Page<Note> notes = noteService.getNotesByUserAndDateRange(user.getUid(), startDate, endDate, pageable);
         return ResponseEntity.ok(notes);
@@ -51,37 +54,36 @@ public class NoteController {
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Note> getNoteById(Authentication authentication, @PathVariable Long id) {
+    public ResponseEntity<Note>getNoteById(Authentication authentication, @PathVariable Long id) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        // Fetch the note as Optional
         Optional<Note> optionalNote = noteService.getNoteById(id, user.getUid());
 
-        // If the note is not found or it's not public and the current user isn't the owner, return a 403
         if (optionalNote.isEmpty() || (!optionalNote.get().isPublic() && !optionalNote.get().getUser().getEmail().equals(email))) {
-            return ResponseEntity.status(403).build();
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
 
-        // Return the note
         return ResponseEntity.ok(optionalNote.get());
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Note> createNote(Authentication authentication, @RequestBody Note note) {
+    public ResponseEntity<Note> createNote(Authentication authentication, @RequestBody CreateNoteDto createNoteDto) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        Note createdNote = noteService.createNote(note, user);
-        return ResponseEntity.ok(createdNote);
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+
+        Note createdNote = noteService.createNote(createNoteDto, user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdNote);
     }
+
     
     @PutMapping("/{noteId}/togglePrivacy")
     public ResponseEntity<Note> toggleNotePrivacy(Authentication authentication ,@PathVariable Long noteId) {
     	String email = authentication.getName();
         User user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         
         Note updateNote = noteService.togglePrivacy(noteId, user);
         
@@ -92,7 +94,7 @@ public class NoteController {
     public ResponseEntity<Void> deleteNoteById(Authentication authentication, @PathVariable Long id) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         if (noteService.deleteNoteById(id, user)) {
             return ResponseEntity.ok().build();
         }
