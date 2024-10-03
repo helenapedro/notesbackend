@@ -49,31 +49,33 @@ public class Note {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+    
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<EditHistory> editHistories;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uid", nullable = false)
     @JsonBackReference
     private User user;
 
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<NoteMedia> media = new ArrayList<>();
 
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Comment> comments = new ArrayList<>();
 
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Collaborator> collaborators = new ArrayList<>();
 
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Favorite> favorites = new ArrayList<>();
 
-    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<AuditLog> auditLogs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "note", cascade = {CascadeType.ALL}, orphanRemoval = true)
+    @OneToMany(mappedBy = "note", cascade = {CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<NoteTag> noteTags = new ArrayList<>();
 
-    // Methods to add/remove tags
     public void addTag(Tag tag) {
         NoteTag noteTag = new NoteTag();
         noteTag.setNote(this);
@@ -82,40 +84,48 @@ public class Note {
     }
 
     public void removeTag(Tag tag) {
-        noteTags.removeIf(nt -> nt.getTag().equals(tag));
+        noteTags.removeIf(nt -> {
+        	if (nt.getTag().equals(tag)) {
+        		nt.setNote(null);
+        		nt.setTag(null);
+        		return true;
+        	}
+        	return false;
+        });
     }
 
-    // Methods to add/remove media
     public void addMedia(NoteMedia mediaItem) {
         mediaItem.setNote(this);
         media.add(mediaItem);
     }
 
     public void removeMedia(NoteMedia mediaItem) {
-        media.remove(mediaItem);
-        mediaItem.setNote(null);
+    	if (media.remove(mediaItem)) {
+    		mediaItem.setNote(null);	
+    	}
     }
 
-    // Methods to add/remove collaborators
     public void addCollaborator(Collaborator collaborator) {
         collaborator.setNote(this);
         collaborators.add(collaborator);
     }
 
     public void removeCollaborator(Collaborator collaborator) {
-        collaborators.remove(collaborator);
-        collaborator.setNote(null);
+        if (collaborators.remove(collaborator)) {
+        	collaborator.setNote(null);
+        	
+        }
     }
 
-    // Methods to add/remove comments
     public void addComment(Comment comment) {
         comment.setNote(this);
         comments.add(comment);
     }
 
     public void removeComment(Comment comment) {
-        comments.remove(comment);
-        comment.setNote(null);
+    	if (comments.remove(comment)) {
+    		comment.setNote(null);	
+    	}
     }
 
     // Methods to add/remove favorites
@@ -125,8 +135,9 @@ public class Note {
     }
 
     public void removeFavorite(Favorite favorite) {
-        favorites.remove(favorite);
-        favorite.setNote(null);
+    	if (favorites.remove(favorite)) {
+    		favorite.setNote(null);	
+    	}
     }
 
     // Method to toggle privacy

@@ -4,11 +4,19 @@ import com.notesbackend.dto.CreateNoteDto;
 import com.notesbackend.model.Tag;
 import com.notesbackend.dto.TagDto;
 import com.notesbackend.exception.ResourceNotFoundException;
+import com.notesbackend.exception.UnauthorizedException;
 import com.notesbackend.model.Note;
 import com.notesbackend.model.NoteTag;
 import com.notesbackend.model.User;
+import com.notesbackend.repository.NoteRepository;
 import com.notesbackend.service.NoteService;
 import com.notesbackend.service.UserService;
+
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,8 +27,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -32,6 +42,11 @@ public class NoteController {
 
     @Autowired
     private UserService userService;
+    
+    @Autowired
+    private NoteRepository noteRepository;
+    
+    private static final Logger logger = LoggerFactory.getLogger(NoteController.class);
     
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -57,11 +72,14 @@ public class NoteController {
         Page<Note> notes = noteService.getPublicNotes(pageable);
         return ResponseEntity.ok(notes);
     }
+    
+    private boolean isNoteAccessibleByUser(Note note, User user) {
+        return note.isPublic() || note.getUser().getEmail().equals(user.getEmail());
+    }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<CreateNoteDto> getNoteById(
-            Authentication authentication,
-            @PathVariable Long id) {
+    @Transactional
+    public ResponseEntity<CreateNoteDto> getNoteById(Authentication authentication, @PathVariable Long id) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -69,82 +87,100 @@ public class NoteController {
         Note note = noteService.getNoteById(id, user.getUid())
                 .orElseThrow(() -> new ResourceNotFoundException("Note not found"));
 
-        if (!note.isPublic() && !note.getUser().getEmail().equals(email)) {
+        if (!isNoteAccessibleByUser(note, user)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
 
         CreateNoteDto noteDto = convertToDto(note);
+        
         return ResponseEntity.ok(noteDto);
     }
 
     private CreateNoteDto convertToDto(Note note) {
-        List<NoteTag> noteTags = note.getNoteTags(); // Check the type and content here
-        System.out.println("NoteTags: " + noteTags); // Debugging
+        List<NoteTag> noteTags = note.getNoteTags(); 
+        logger.debug("NoteTags: {}", noteTags); 
 
         List<TagDto> tagDtos = noteTags.stream()
                 .map(noteTag -> {
-                    System.out.println("NoteTag: " + noteTag); // Debugging
-                    return convertToTagDto(noteTag.getTag()); // Ensure noteTag.getTag() is returning a Tag
+                	logger.debug("NoteTag: {}", noteTag);
+                    return convertToTagDto(noteTag.getTag());
                 })
                 .collect(Collectors.toList());
 
-        return new CreateNoteDto(
-                note.getNid(),
-                note.getTitle(),
-                note.getBody(),
-                tagDtos
-        );
+        return new CreateNoteDto(note.getNid(), note.getTitle(), note.getBody(), tagDtos);
     }
 
     private TagDto convertToTagDto(Tag tag) {
         return new TagDto(tag.getTid(), tag.getName());
     }
+    
+    private List<NoteTag> convertToTagDtos(List<Map<String, Object>> tagDtos) {
+        return tagDtos.stream()
+                .map(tagDto -> new NoteTag())
+                .collect(Collectors.toList());
+    }
+
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Note> createNote(Authentication authentication, @RequestBody CreateNoteDto createNoteDto) {
+    public ResponseEntity<Note> createNote(Authentication authentication, @Valid @RequestBody CreateNoteDto createNoteDto) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
         Note createdNote = noteService.createNote(createNoteDto, user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdNote);
+        return ResponseEntity.created(URI.create("/api/notes/" + createdNote.getNid())).body(createdNote);
     }
 
     
     @PutMapping("/{noteId}/togglePrivacy")
-    public ResponseEntity<Note> toggleNotePrivacy(Authentication authentication ,@PathVariable Long noteId) {
+    public ResponseEntity<String> toggleNotePrivacy(Authentication authentication ,@PathVariable Long noteId) {
     	String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         
         Note updateNote = noteService.togglePrivacy(noteId, user);
         
-        return ResponseEntity.ok(updateNote);
+        return ResponseEntity.ok("Privacy status updated to: " + updateNote.isPublic());
     }
     
-    @PutMapping("/{noteId}")
-    public ResponseEntity<Note> updateNote(
-            Authentication authentication,
-            @PathVariable Long noteId,
-            @RequestBody Note updatedNote) {
-        
+    @PatchMapping("/{noteId}")
+    public ResponseEntity<Note> patchNote(Authentication authentication, @PathVariable Long noteId, @RequestBody Map<String, Object> updates) {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        // Find the existing note by ID and verify ownership
         Note existingNote = noteService.getNoteById(noteId, user.getUid())
                 .orElseThrow(() -> new ResourceNotFoundException("Note not found"));
 
-        // Update the note's details
-        existingNote.setTitle(updatedNote.getTitle());
-        existingNote.setBody(updatedNote.getBody());
+        // Apply partial updates
+        updates.forEach((key, value) -> {
+            switch (key) {
+                case "title":
+                    existingNote.setTitle((String) value);
+                    break;
+                case "body":
+                    existingNote.setBody((String) value);
+                    break;
+                case "tags":
+                    if (value instanceof List) {
+                        @SuppressWarnings("unchecked")
+                        List<Map<String, Object>> tagDtos = (List<Map<String, Object>>) value;
+                        existingNote.setNoteTags(convertToTagDtos(tagDtos));
+                    } else {
+                        throw new IllegalArgumentException("Expected a List for tags.");
+                    }
+                    break;
+                default:
+                    throw new IllegalArgumentException("Field '" + key + "' is not recognized.");
+            }
+        });
 
-        // Save the updated note
-        Note savedNote = noteService.updateNote(noteId, existingNote, user);
-        
-        return ResponseEntity.ok(savedNote);
+        Note updatedNote = noteService.updateNote(noteId, existingNote, user);
+        return ResponseEntity.ok(updatedNote);
     }
+
+
+
 
 
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -152,9 +188,18 @@ public class NoteController {
         String email = authentication.getName();
         User user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
-        if (noteService.deleteNoteById(id, user)) {
-            return ResponseEntity.ok().build();
+
+        Note note = noteRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Note not found"));
+        
+        if (!note.getUser().getUid().equals(user.getUid())) {
+            throw new UnauthorizedException("You are not authorized to delete this note");
         }
-        return ResponseEntity.notFound().build();
+
+        noteRepository.delete(note);
+        return ResponseEntity.noContent().build();
     }
+
+
+
 }

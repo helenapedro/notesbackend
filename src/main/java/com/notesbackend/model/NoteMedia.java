@@ -8,11 +8,11 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 
-@Data
 @Entity
 @Table(name = "note_media")
 @EqualsAndHashCode(exclude = {"note", "uploadedBy"})
 @ToString(exclude = {"note", "uploadedBy"})
+@Data
 public class NoteMedia {
     
     @Id
@@ -25,7 +25,7 @@ public class NoteMedia {
     
     private String s3Url;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "nid", nullable = false)
     private Note note; 
 
