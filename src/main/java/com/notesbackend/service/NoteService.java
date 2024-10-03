@@ -2,6 +2,7 @@ package com.notesbackend.service;
 
 import com.notesbackend.repository.NoteRepository;
 import com.notesbackend.dto.CreateNoteDto;
+import com.notesbackend.dto.TagDto;
 import com.notesbackend.exception.ResourceNotFoundException;
 import com.notesbackend.model.Note;
 import com.notesbackend.model.User;
@@ -26,7 +27,9 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,6 +56,17 @@ public class NoteService {
 
     @Autowired
     private FavoriteRepository favoriteRepository;
+    
+    @Autowired
+    private TagService tagService;
+    
+    public CreateNoteDto convertToDto(Note note) {
+    	 List<TagDto> tagDtos = tagService.convertToDtoList(note.getNoteTags().stream()
+                 .map(NoteTag::getTag)
+                 .collect(Collectors.toList()));
+
+    	 return new CreateNoteDto(note.getNid(), note.getTitle(), note.getBody(), tagDtos);
+    }
 
     @PreAuthorize("isAuthenticated()")
     public Page<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {

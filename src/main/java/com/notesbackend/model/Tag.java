@@ -2,10 +2,8 @@ package com.notesbackend.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.hibernate.validator.constraints.UniqueElements;
-
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +20,7 @@ public class Tag {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tid;
     
-    @UniqueElements
+    @Column(unique = true)
     private String name;
     
     @OneToMany(mappedBy = "tag", cascade = CascadeType.ALL, orphanRemoval = true)
