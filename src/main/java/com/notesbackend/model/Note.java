@@ -22,9 +22,9 @@ import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-@Data
-@Entity
 @Table(name = "notes", uniqueConstraints = @UniqueConstraint(columnNames = {"uid", "title"}))
+@Entity
+@Data
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

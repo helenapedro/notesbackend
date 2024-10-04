@@ -15,7 +15,6 @@ public class CreateNoteDto {
     @Size(max = 100, message = "Title cannot exceed 100 characters")
     private String title;
 
-    @NotBlank(message = "Body is required")
     @Size(max = 1000, message = "Body cannot exceed 1000 characters")
     private String body;
     

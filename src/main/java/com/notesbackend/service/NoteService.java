@@ -67,6 +67,14 @@ public class NoteService {
 
     	 return new CreateNoteDto(note.getNid(), note.getTitle(), note.getBody(), tagDtos);
     }
+    
+    public Note createNote(CreateNoteDto createNoteDto, User user) {
+        Note note = new Note();
+        note.setTitle(createNoteDto.getTitle());
+        note.setBody(createNoteDto.getBody());
+        note.setUser(user);
+        return noteRepository.save(note);
+    }
 
     @PreAuthorize("isAuthenticated()")
     public Page<Note> getNotesByUserAndDateRange(Long userId, LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {
@@ -92,21 +100,12 @@ public class NoteService {
             .filter(foundNote -> foundNote.getUser().getUid().equals(userId));
     }
 
-    public Note createNote(CreateNoteDto createNoteDto, User user) {
-        Note note = new Note();
-        note.setTitle(createNoteDto.getTitle());
-        note.setBody(createNoteDto.getBody());
-        note.setUser(user);
-        return noteRepository.save(note);
-    }
-
-
     @CachePut(value = "notes", key = "#user.uid + '-' + #id")
     public Note updateNote(Long id, Note updatedNote, User user) {
         Note note = noteRepository.findById(id).orElseThrow(() -> 
             new ResourceNotFoundException("Note not found with id " + id));
         
-        if (note.getUser().getUid().equals(user.getUid())) {
+        if (note != null && note.getUser().getUid().equals(user.getUid())) {
             note.setTitle(updatedNote.getTitle());
             note.setBody(updatedNote.getBody());
             note.setUpdatedAt(LocalDateTime.now());
